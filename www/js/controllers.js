@@ -1,5 +1,46 @@
 angular.module('starter.controllers', [])
 
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicSideMenuDelegate) {
+	
+	$scope.toggle = function() {
+		console.log("toggle called");
+		
+		$ionicSideMenuDelegate.toggleRight(false);
+	}
+})
+
+.controller('ConquerCtrl', function($scope) {
+	$scope.list = [
+		{ title: "Baker's", id: 1 },
+		{ title: "Ben Nevis", id: 2 },
+		{ title: "Black Maple Hill", id: 3 },
+		{ title: "Black Nikka", id: 4 },
+		{ title: "Blackadder", id: 5 },
+		{ title: "Bunnahabhain", id: 6 }
+	];
+})
+
+.controller('StockCtrl', function($scope) {
+	$scope.list = [
+		{ title: "Baker's", id: 1 },
+		{ title: "Ben Nevis", id: 2 },
+		{ title: "Black Maple Hill", id: 3 },
+		{ title: "Black Nikka", id: 4 },
+		{ title: "Blackadder", id: 5 },
+		{ title: "Bunnahabhain", id: 6 }
+	];
+})
+
+.controller('BottleCtrl', function($scope, $stateParams) {
+});
+
+
+/*---------------------
+	For Later Use
+ *---------------------	
+
+angular.module('starter.controllers', [])
+
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for the login modal
   $scope.loginData = {};
@@ -46,3 +87,7 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
+*/
+
+
+
